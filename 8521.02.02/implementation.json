@@ -320,7 +320,8 @@
       "8521_0202_HEIGHT",
       "8521_0202_SUBMIT",
       "8521_0202_SUBMIT_ACK",
-      "8521_0202_SUBMIT_NACK"
+      "8521_0202_SUBMIT_NACK",
+      "8521_0202_WITHDRAW"
     ]
   },
   "source_study_id": "8521.02.01",
