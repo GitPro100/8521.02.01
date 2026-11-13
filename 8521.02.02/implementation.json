@@ -1,0 +1,328 @@
+{
+  "study_id": "8521.02.02",
+  "title": "Product Equivalence Recalibration Pretest",
+  "protocol_version": "1.0",
+  "app_version": "1.0.0",
+  "created_date": "2026-11-13",
+  "parent_study": "8521.01.01",
+  "parent_protocol": "v1.4",
+  "parent_app": "v1.13",
+  "purpose": "Evaluate baseline-choice balance and perceived nutritional objective-fit/desirability of conservatively recalibrated energy-bar profiles (Version A), without an AI recommendation.",
+  "design": {
+    "within_participant_product_evaluations": true,
+    "between_participant_randomization_factors": [
+      "profile_A",
+      "A_position"
+    ],
+    "configurations": [
+      {
+        "id": "T_X_L",
+        "profile_A": "X",
+        "profile_B": "Y",
+        "A_position": "left"
+      },
+      {
+        "id": "T_X_R",
+        "profile_A": "X",
+        "profile_B": "Y",
+        "A_position": "right"
+      },
+      {
+        "id": "T_Y_L",
+        "profile_A": "Y",
+        "profile_B": "X",
+        "A_position": "left"
+      },
+      {
+        "id": "T_Y_R",
+        "profile_A": "Y",
+        "profile_B": "X",
+        "A_position": "right"
+      }
+    ],
+    "equal_probability_target": 0.25,
+    "no_ai_recommendation": true,
+    "no_sponsorship": true,
+    "no_mandate": true
+  },
+  "targets": {
+    "fat_g": 7,
+    "protein_g": 11,
+    "carbohydrates_g": 30
+  },
+  "profiles": {
+    "X": {
+      "fat_g": 5.4,
+      "protein_g": 10.3,
+      "carbohydrates_g": 34.3
+    },
+    "Y": {
+      "fat_g": 8.6,
+      "protein_g": 11.7,
+      "carbohydrates_g": 25.7
+    }
+  },
+  "metric": {
+    "each_profile_absolute_deviation": [
+      1.6,
+      0.7,
+      4.3
+    ],
+    "sum_absolute_deviation": 6.6,
+    "MAD": 2.2,
+    "estimated_kcal": 227,
+    "public_display": false,
+    "notes": "Each revised profile is equidistant from the stated goals; computed for both profiles separately."
+  },
+  "stimulus_constants": {
+    "equal_price": true,
+    "equal_serving_size": true,
+    "numeric_price_hidden": true,
+    "numeric_serving_size_hidden": true,
+    "all_targets_equally_important": true,
+    "above_below_targets_equal_deviation": true
+  },
+  "consent": {
+    "status": "Institution-approved consent text supplied by researcher; retained unchanged in v1.3.",
+    "screen": "S00",
+    "title": "Informed Consent",
+    "paragraphs": [
+      "I hereby confirm that I agree to participate in a study about decision making in various fields.",
+      "Study goal: to assess product choice accuracy.",
+      "Potential risks: no potential risks.",
+      "Potential benefits from the research: contribution to the field of decision making.",
+      "I understand that if, for any reason, I will choose to stop my participation I can do it at any time and without cost and will not be required to explain my decision.",
+      "In the event that during or following the experiment you will feel uncomfortable, please contact the principal investigator(s) through the email listed below.",
+      "Please indicate whether you agree to participate in the study."
+    ],
+    "response_options": [
+      "I agree",
+      "I disagree and wish to decline my participation"
+    ],
+    "decline_action": "Stop experimental procedure and do not assign or display experimental treatment; follow approved platform exit handling",
+    "missing_in_supplied_text": "Approved consent refers to a contact email not included in supplied copy; verify approved participant contact channel separately and do not alter approved wording.",
+    "review_note": "Preserve institution-approved consent verbatim. Verify that approved participant contact channel, debrief and applicable ethics coverage match the study. Do not independently edit approved wording."
+  },
+  "general_instructions": {
+    "title": "General instructions",
+    "rules": [
+      "This task requires your full attention.",
+      "Please complete this task on a desktop or laptop computer only.",
+      "Please complete the task in one sitting, without breaks.",
+      "From now until the end of the task, please do not browse the web or use your mobile phone or other devices."
+    ],
+    "warning": "Failing to comply with these requirements may invalidate your participation.",
+    "closing": "Thank you."
+  },
+  "questions": {
+    "choice": {
+      "code": "choice_label",
+      "text": "Which energy bar would you choose?",
+      "options": [
+        "Energy Bar A",
+        "Energy Bar B"
+      ],
+      "required": true,
+      "administer_before_ratings": true
+    },
+    "fit": {
+      "codes": [
+        "fit_A",
+        "fit_B"
+      ],
+      "text_template": "How well does Energy Bar {bar} match the stated nutritional objectives?",
+      "anchors": [
+        "Very poorly",
+        "Very well"
+      ],
+      "range": [
+        1,
+        7
+      ],
+      "required": true
+    },
+    "desirability": {
+      "codes": [
+        "desirability_A",
+        "desirability_B"
+      ],
+      "text_template": "How desirable do you find Energy Bar {bar} overall?",
+      "anchors": [
+        "Not at all desirable",
+        "Extremely desirable"
+      ],
+      "range": [
+        1,
+        7
+      ],
+      "required": true
+    }
+  },
+  "demographics": {
+    "gender": {
+      "type": "single_choice",
+      "required": true,
+      "options": [
+        "female",
+        "male",
+        "nonbinary",
+        "self_describe"
+      ]
+    },
+    "age": {
+      "type": "integer",
+      "minimum": 18,
+      "maximum": 80,
+      "required": true
+    },
+    "education": {
+      "type": "single_choice",
+      "required": true,
+      "options": [
+        {
+          "code": "left_before_lower_secondary",
+          "label": "left before completing lower-secondary"
+        },
+        {
+          "code": "completed_lower_secondary",
+          "label": "completed lower-secondary"
+        },
+        {
+          "code": "completed_upper_secondary",
+          "label": "completed upper-secondary"
+        },
+        {
+          "code": "studied_higher_education",
+          "label": "studied in higher education"
+        },
+        {
+          "code": "completed_bachelor",
+          "label": "completed bachelor degree"
+        },
+        {
+          "code": "completed_master_or_above",
+          "label": "completed master's degree or above"
+        }
+      ]
+    },
+    "income": {
+      "type": "single_choice",
+      "required": true,
+      "currency": "GBP",
+      "unit": "annual household income",
+      "options": [
+        {
+          "code": "under_10000",
+          "label": "Less than £10,000"
+        },
+        {
+          "code": "10000_19999",
+          "label": "£10,000 - £19,999"
+        },
+        {
+          "code": "20000_29999",
+          "label": "£20,000 - £29,999"
+        },
+        {
+          "code": "30000_39999",
+          "label": "£30,000 - £39,999"
+        },
+        {
+          "code": "40000_49999",
+          "label": "£40,000 - £49,999"
+        },
+        {
+          "code": "50000_59999",
+          "label": "£50,000 - £59,999"
+        },
+        {
+          "code": "60000_69999",
+          "label": "£60,000 - £69,999"
+        },
+        {
+          "code": "70000_79999",
+          "label": "£70,000 - £79,999"
+        },
+        {
+          "code": "80000_89999",
+          "label": "£80,000 - £89,999"
+        },
+        {
+          "code": "90000_99999",
+          "label": "£90,000 - £99,999"
+        },
+        {
+          "code": "100000_149999",
+          "label": "£100,000 - £149,999"
+        },
+        {
+          "code": "150000_or_more",
+          "label": "£150,000 or more"
+        }
+      ]
+    }
+  },
+  "derived_fields": [
+    "chosen_profile",
+    "chosen_side",
+    "choice_X",
+    "fit_X",
+    "fit_Y",
+    "desirability_X",
+    "desirability_Y",
+    "fit_X_minus_Y",
+    "desirability_X_minus_Y"
+  ],
+  "analysis": {
+    "primary_endpoint": "choice_X, baseline preference for profile X versus Y",
+    "primary_test": "Report X choice proportion and exact 95% CI; two-sided exact binomial test vs .5 is descriptive, not equivalence evidence.",
+    "secondary_tests": [
+      "Paired equivalence (TOST) for desirability_X minus desirability_Y, prespecified bounds [-0.50,+0.50] points; show 90% CI.",
+      "Paired equivalence (TOST) for fit_X minus fit_Y, prespecified bounds [-0.50,+0.50] points; show 90% CI."
+    ],
+    "diagnostics": [
+      "Logistic regression choice_X ~ profile_A_is_X + A_position_left",
+      "Counterbalancing and attrition audit by configuration"
+    ],
+    "practical_screen_rule": "Calibration target: X share approximately 45% to 55% (descriptive). Do not interpret nonsignificance as equivalence; formally validate choice with a prespecified equivalence margin (proposed 40% to 60%) in an adequately powered independent sample.",
+    "statistics_caveat": "Statistical nonsignificance does not establish equivalence. Report magnitude and confidence intervals; if claiming formal equivalence, prespecify bounds and run TOST.",
+    "pilot_sample_size": "Version A diagnostic pilot N ~40-50 new participants across four cells (10-13 per cell); adjust based on precision, not formal equivalence power.",
+    "missingness": "All displayed responses required; complete-case analytic file excludes incomplete/withdrawn/timed-out. No imputation. Platform compensation adjudicated separately.",
+    "preregistration": "Not yet; researcher to review after pretest design finalized."
+  },
+  "deployment": {
+    "local_file_mode": "researcher_preview",
+    "hosted_nonlive_mode": "participant_demo",
+    "live_query_fields": [
+      "live=1",
+      "pid or PROLIFIC_PID",
+      "assignment (one of T_X_L,T_X_R,T_Y_L,T_Y_R)",
+      "parent_origin (HTTPS origin)"
+    ],
+    "persistent_assignment": "Qualtrics Embedded Data or trusted server state; localStorage demo only",
+    "live_completion_requires_host_ack": true,
+    "prolific_code_in_app": false,
+    "device_eligibility": [
+      "desktop",
+      "laptop"
+    ],
+    "warnings": [
+      "Deploy only with approved consent/ethics coverage and investigator contact information.",
+      "Browser-only device checks are imperfect.",
+      "The single-file HTML does not itself save results to a server."
+    ],
+    "handoff_delay_ms": 2000,
+    "handoff_policy": "After validating the final answer, display a brief thank-you for 2 seconds, then post the payload to the Qualtrics parent. The Qualtrics bridge must record the fields on the survey page and advance to its End-of-Survey element. GitHub Pages does not persist responses; the app never directly navigates to Prolific or issues completion codes.",
+    "participant_header_footer": "Hide study name/banner and study ID/version footer in Participant Mode; show in Researcher Preview.",
+    "qualtrics_ack_note": "Receipt by the iframe parent confirms only client-side handoff, not durable server persistence. Qualtrics must submit the page to save the response; live Prolific redirect is configured by Qualtrics.",
+    "github_username": "gitpro100",
+    "host_message_types": [
+      "8521_0202_HEIGHT",
+      "8521_0202_SUBMIT",
+      "8521_0202_SUBMIT_ACK",
+      "8521_0202_SUBMIT_NACK"
+    ]
+  },
+  "source_study_id": "8521.02.01",
+  "stimulus_version": "A_conservative"
+}
