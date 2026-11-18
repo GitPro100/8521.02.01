@@ -347,6 +347,6 @@
   "source_study_id": "8521.02.02",
   "stimulus_version": "moderate_satfat_sugar",
   "original_pretest_id": "8521.02.01",
-  "revision_note": "Removed redundant introductory sentence from objectives screen. App version kept 1.0.0 to preserve compatibility with the existing Qualtrics bridge version check.",
-  "ui_revision": "2026-11-18_1213"
+  "revision_note": "Updated the choice-screen introductory sentence to emphasize matching nutritional objectives and added a compact, dynamically generated reminder of all three target levels above the product cards. No data structure or study logic changed.",
+  "ui_revision": "2026-11-18_1250"
 }
