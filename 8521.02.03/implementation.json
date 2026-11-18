@@ -2,7 +2,7 @@
   "study_id": "8521.02.03",
   "title": "Product Equivalence Pretest — Moderate Saturated Fat and Added Sugars",
   "protocol_version": "1.0",
-  "app_version": "1.0.0",
+  "app_version": "1.0.1",
   "created_date": "2026-11-18",
   "parent_study": "8521.01.01",
   "parent_protocol": "v1.4",
@@ -346,5 +346,6 @@
   },
   "source_study_id": "8521.02.02",
   "stimulus_version": "moderate_satfat_sugar",
-  "original_pretest_id": "8521.02.01"
+  "original_pretest_id": "8521.02.01",
+  "revision_note": "Removed redundant introductory sentence from the Choosing an Energy Bar objectives screen; nutrition targets and participant procedure remain unchanged."
 }
